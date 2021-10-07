@@ -32,7 +32,7 @@ reports:
   code-coverage-report: # For Code Coverage Reports
     files:
       - jacoco.xml
-    file-format: 'JaCoCo.Xml'
+    file-format: 'JaCoCoXml'
     base-directory: 'target/site/jacoco'
 
 cache:
