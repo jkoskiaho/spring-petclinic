@@ -34,3 +34,7 @@ reports:
       - jacoco.xml
     file-format: 'JaCoCo.Xml'
     base-directory: 'target/site/jacoco'
+
+cache:
+  paths:
+    - '/root/.m2/**/*'
