@@ -17,7 +17,7 @@ phases:
       - echo Building the Docker image...
       - docker build --build-arg JAR_FILE=spring-petclinic-$JAR_VERSION.jar -t petclinic:$JAR_VERSION .
       ## And tagging it with correct URI
-      - docker tag petclinic:$JAR_VERSION $AWS_CCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/petclinic:$JAR_VERSION
+      - docker tag petclinic:$JAR_VERSION $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/petclinic:$JAR_VERSION
   post_build:
     commands:
       - echo Build completed on `date`
