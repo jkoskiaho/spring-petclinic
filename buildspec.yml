@@ -13,6 +13,7 @@ phases:
       - $(aws ecr get-login --no-include-email --region $AWS_DEFAULT_REGION)
       - echo Get Codeartifact Auth token...
       - export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain example-org-artifacts --domain-owner $AWS_ACCOUNT_ID --query authorizationToken --output text`
+      - echo $CODEARTIFACT_AUTH_TOKEN
   build:
     commands:
       - echo Build started on `date`
